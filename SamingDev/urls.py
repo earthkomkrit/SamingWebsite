@@ -35,8 +35,7 @@ urlpatterns = [
     url(r'^Change_Password/$', views.Change_Password),
     url(r'^Forgot_Password/$', views.Forgot_Password),
     url(r'^ClassRoom/Assignment/', include('Assign_Management.urls')),
-    #url(r'^', include('Assign_Management.urls')),
-
+    url(r'^', include('LogIn_Management.urls')),
 
     #logout default function
     url(r'^LogOut/$', auth_views.logout, {'next_page': '/'}, name='logout'),
